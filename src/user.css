@@ -1,0 +1,69 @@
+/* 
+/* || Bugfixes
+*/
+
+/* #590: Topbar visibility bug */
+.main-topBar-topbarContent:not(.main-topBar-topbarContentFadeIn)>* {
+	opacity: unset !important;
+}
+.main-entityHeader-topbarContent:not(.main-entityHeader-topbarContentFadeIn)>* {
+	opacity: 0 !important;
+}
+
+/* 
+/* || Better stolen than badly conceived
+*/
+
+/* What does this do? */
+.connect-title, .connect-header {
+	display: none;
+}
+
+/* 
+/* || Clean Home
+*/
+
+/* Home - Hide "shortcuts" */
+.view-homeShortcutsGrid-shortcuts {
+	display: none !important;
+}
+
+/* Home - Hide second row (podcasts - for now) */
+section.main-shelf-shelf:nth-child(2) {
+	display: none !important;
+}
+
+/* 
+/* || Density - make everything more dense, show more content
+*/
+
+/* || Home */
+div.main-home-home div.main-home-content {
+grid-gap: 0px;
+padding-top: 0px;
+}
+
+div.main-card-card {
+padding: 6px;
+}
+
+div.main-card-imageContainer {
+margin-bottom: 8px;
+}
+
+div.main-gridContainer-gridContainer {
+--minimumColumnWidth: 150px !important;
+grid-gap: 10px;
+}
+
+/* || Track List */
+.main-trackList-trackListRow {
+height: 42px;
+}
+
+/* || Playback */
+.main-entityHeader-container.main-entityHeader-nonWrapped {
+    height: 30vh;
+    max-height: 450px;
+    min-height: 300px;
+}
