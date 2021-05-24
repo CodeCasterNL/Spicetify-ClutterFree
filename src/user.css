@@ -24,12 +24,12 @@
 */
 
 /* Home - Hide "shortcuts" */
-.view-homeShortcutsGrid-shortcuts {
+section[data-testid="home-page"] > div > div > section:nth-child(1) {
 	display: none !important;
 }
 
 /* Home - Hide second row (podcasts - for now) */
-section.main-shelf-shelf:nth-child(2) {
+section[data-testid="home-page"] > div > div > section:nth-child(2) {
 	display: none !important;
 }
 
@@ -38,31 +38,34 @@ section.main-shelf-shelf:nth-child(2) {
 */
 
 /* || Home */
-div.main-home-home div.main-home-content {
-grid-gap: 0px;
-padding-top: 0px;
-}
-
-div.main-card-card {
-padding: 6px;
-}
-
-div.main-card-imageContainer {
-margin-bottom: 8px;
-}
-
-div.main-gridContainer-gridContainer {
---minimumColumnWidth: 150px !important;
-grid-gap: 10px;
+div.contentSpacing {
+	grid-gap: 0px;
+	padding-top: 0px;
 }
 
 /* || Track List */
-.main-trackList-trackListRow {
-height: 42px;
+div[role="presentation"] > div[role="row"] > div[role="presentation"] {
+	height: 42px;
 }
 
-/* || Playback */
-.main-entityHeader-container.main-entityHeader-nonWrapped {
+/* Spotify devs be like "screw you and your classes" between two minor releases */
+
+/* Main -> Row -> Tile -> Album image */
+div > section > div > div > section > div > div > div > div > div > div > img {
+	margin-bottom: 8px;
+}
+
+div > section > div > div > section > div > div {
+	padding: 6px;
+}
+
+div > section > div > div > section > div {
+	--minimumColumnWidth: 150px !important;
+	grid-gap: 10px !important;
+}
+
+/* || Playlist header */
+div > section[role="presentation"] > div.nth-child(1) {
     height: 30vh;
     max-height: 450px;
     min-height: 300px;
