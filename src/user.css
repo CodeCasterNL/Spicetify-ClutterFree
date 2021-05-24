@@ -23,13 +23,18 @@
 /* || Clean Home
 */
 
-/* Home - Hide "shortcuts" */
+/* Hide "shortcuts" ("Good $partOfDay") */
 section[data-testid="home-page"] > div > div > section:nth-child(1) {
 	display: none !important;
 }
 
-/* Home - Hide second row (podcasts - for now) */
+/* Hide second row ("Recently played") */
 section[data-testid="home-page"] > div > div > section:nth-child(2) {
+	display: none !important;
+}
+
+/* Hide third row ("Your top shows") */
+section[data-testid="home-page"] > div > div > section:nth-child(3) {
 	display: none !important;
 }
 
