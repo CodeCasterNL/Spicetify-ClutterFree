@@ -70,3 +70,23 @@ div > section[role="presentation"] > div.nth-child(1) {
     max-height: 450px;
     min-height: 300px;
 }
+
+/* || Search page */
+div._5aac821edb25f0e281f50522021abbe4-scss {
+	--minimumColumnWidth: 150px !important;
+	grid-gap: 10px !important;
+}
+
+/* Style "Your top genres" just like "Browse all" below it */
+section._6695fd91ea13e90d9b9d54584c048547-scss div._5aac821edb25f0e281f50522021abbe4-scss {
+	--column-width: 162px !important;
+}
+
+	a.c5a28c705b992b76c45dbb776cf76047-scss {
+		height: 162px;
+		grid-column: span 1;
+	}
+
+	h3.fbe9fd01f8ae7354e9082a5816a3300c-scss {
+		font-size: 24px;
+	}
